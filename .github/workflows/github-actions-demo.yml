@@ -7,7 +7,7 @@ jobs:
   Run-Yarn-Audit:
     runs-on: ubuntu-latest
     steps:
-      - name: Running Yarn Audit
+      - name: Running Yarn Audit on Repo
         id: yarn_audit
         uses: GradiusX/yarn-audit-github-action@v1.4
         with:
