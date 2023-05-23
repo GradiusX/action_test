@@ -7,13 +7,14 @@ jobs:
   Run-Yarn-Audit:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello world action step
-        id: hello
+      - name: Running Yarn Audit
+        id: yarn_audit
         uses: GradiusX/yarn-audit-github-action@v1.2
         with:
-          who-to-greet: 'Francesco'
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+          # Report only this level and above (info|low|moderate|high|critical)
+          severity-level: 'critical'
+      #- name: Get the output time
+      #  run: echo "The time was ${{ steps.hello.outputs.time }}"
       #- run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       #- run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       #- run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
