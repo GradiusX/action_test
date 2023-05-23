@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Running Yarn Audit
         id: yarn_audit
-        uses: GradiusX/yarn-audit-github-action@v1.2
+        uses: GradiusX/yarn-audit-github-action@v1.4
         with:
           # Report only this level and above (info|low|moderate|high|critical)
           severity-level: 'critical'
