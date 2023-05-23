@@ -17,11 +17,3 @@ jobs:
         with:
           # Report only this level and above (info|low|moderate|high|critical)
           severity-level: 'critical'
-      - run: echo "🍏 This job's status is ${{ job.status }}."
-
-      #- name: List files in the repository
-      #  run: |
-      #    ls ${{ github.workspace }}
-      #- name: Yarn Audit the repository
-      #  run: |
-      #    yarn audit ${{ github.workspace }}
