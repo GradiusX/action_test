@@ -13,7 +13,7 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: Running Yarn Audit on Repo
         id: yarn_audit
-        uses: GradiusX/yarn-audit-github-action@v1.5
+        uses: GradiusX/yarn-audit-github-action@v1.6
         with:
           # Report only this level and above (info|low|moderate|high|critical)
           severity-level: 'critical'
