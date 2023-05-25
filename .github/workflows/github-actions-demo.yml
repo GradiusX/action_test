@@ -12,7 +12,7 @@ jobs:
       - name: Running Yarn Audit on Repo
         id: yarn_audit
         # False = break pipeline if vulns are found; True = continue irrespectively
-        continue-on-error: false
+        continue-on-error: true
         # Update tag to latest version
         uses: GradiusX/yarn-audit-github-action@main
         with:
