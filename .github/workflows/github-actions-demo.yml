@@ -7,7 +7,7 @@ jobs:
   Security-Pipeline:
     uses: GradiusX/security-pipeline/.github/workflows/pipeline.yml@main
     with:
-      continue-on-error: true
+      continue-on-error: false
 #   Run-Yarn-Audit:
 #     runs-on: ubuntu-latest
 #     steps:
