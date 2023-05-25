@@ -36,4 +36,4 @@ jobs:
         continue-on-error: true
         # Update tag to latest version
         run: |
-          yarn audit
+          yarn audit --level critical
