@@ -13,6 +13,5 @@ jobs:
         id: yarn_audit
         # False = break pipeline if vulns are found; True = continue irrespectively
         continue-on-error: false
-        # Update tag to latest version
         run: |
           yarn audit --level critical
