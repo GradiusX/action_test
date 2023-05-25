@@ -4,14 +4,16 @@ on:
   push:
     branches: [main]
 jobs:
-  Run-Yarn-Audit:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v3
-      - name: Running Yarn Audit on Repo
-        id: yarn_audit
-        # False = break pipeline if vulns are found; True = continue irrespectively
-        continue-on-error: false
-        run: |
-          yarn audit --level critical
+  Security-Pipeline:
+    uses: GradiusX/security-pipeline/.github/workflows/pipeline.yml@main
+#   Run-Yarn-Audit:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Check out repository code
+#         uses: actions/checkout@v3
+#       - name: Running Yarn Audit on Repo
+#         id: yarn_audit
+#         # False = break pipeline if vulns are found; True = continue irrespectively
+#         continue-on-error: false
+#         run: |
+#           yarn audit --level critical
