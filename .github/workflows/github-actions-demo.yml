@@ -7,16 +7,7 @@ jobs:
   Security-Pipeline:
     uses: GradiusX/security-pipeline/.github/workflows/pipeline.yml@main
     with:
+      # true = do not break pipeline; false = break pipeline
       continue-on-error: false
-      severity-level: "high"
-#   Run-Yarn-Audit:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Check out repository code
-#         uses: actions/checkout@v3
-#       - name: Running Yarn Audit on Repo
-#         id: yarn_audit
-#         # False = break pipeline if vulns are found; True = continue irrespectively
-#         continue-on-error: false
-#         run: |
-#           yarn audit --level critical
+      # Report only this level and above (info|low|moderate|high|critical)
+      severity-level: "critical"
