@@ -9,4 +9,4 @@ jobs:
         uses: GradiusX/security-pipeline/.github/workflows/pipeline.yml@main
         with:
             continue-on-error: false
-            severity-level: "critical"
+            severity-level: "high"
