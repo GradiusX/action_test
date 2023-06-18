@@ -9,7 +9,7 @@ jobs:
         uses: GradiusX/security-pipeline/.github/workflows/pipeline.yml@dev
         with:
             continue-on-error: false
-            severity-level: "critical"
+            severity-level: "high"
         secrets:
             defectdojo-url: ${{ secrets.DEFECTDOJO_URL }}
             defectdojo-api-key: ${{ secrets.DEFECTDOJO_API_KEY }}
