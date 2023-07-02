@@ -10,7 +10,7 @@ jobs:
         with:
             continue-on-error: false
             severity-level: "critical"
-            trufflehog-exclusion-list: >
+            secrets-exclusion-list: >
                 ^\.git/.*
                 ^secrets_test.yaml$
             defectdojo-url: ${{ vars.DEFECTDOJO_URL }}
